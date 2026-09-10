@@ -6,7 +6,12 @@ def add_employee():
     emp_id=input("Enter Employee ID:")
     name=input("Enter Employee Name:")
     department=input("Enter department:")
-    salary=input("Enter Salary:")
+    
+    try:
+        salary=float(input("Enter Salary:"))
+    except ValueError:
+        print("invalid salary.please enter a number.")
+        return
 
     employee={
         "id":emp_id,
@@ -64,7 +69,7 @@ def update_employee():
             if name:
                 employee["name"]=name
             if department:
-                employee["departmet"]=department
+                employee["department"]=department
             if salary:
                 employee["salary"]=salary
             print("Employee updated succesfully!")
@@ -82,8 +87,7 @@ def delete_employee():
             employees.remove(employee)
             print("Employee Deleted successfully!")
             return
-        
-        print("Employee not Found.")
+    print("Employee not Found.")
 
 while True:
     print("\n====Employee Management System====")
