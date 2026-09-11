@@ -52,7 +52,7 @@ Open the project folder in **VS Code** or any Python IDE.
 ### 4. Run the Program
 
 ```bash
-python EMS.py
+EMS.py
 ```
 
 ## 💻 Application Menu
